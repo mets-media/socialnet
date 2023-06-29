@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: 20(1)
+      author: Michael
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: currencies_key
+                  name: id
+                  type: BIGSERIAL
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+              - column:
+                  name: price
+                  type: VARCHAR(255)
+              - column:
+                  name: update_time
+                  type: TIMESTAMP WITHOUT TIME ZONE
+            tableName: currencies

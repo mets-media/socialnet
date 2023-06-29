@@ -1,0 +1,34 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_weather_table
+      author: Michael
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: weather_key
+                  name: id
+                  type: BIGSERIAL
+              - column:
+                  name: open_weather_id
+                  type: BIGINT
+              - column:
+                  name: city
+                  type: VARCHAR(255)
+              - column:
+                  name: clouds
+                  type: VARCHAR(150)
+              - column:
+                  name: date
+                  type: TIMESTAMP WITHOUT TIME ZONE
+              - column:
+                  name: temp
+                  type: REAL
+            tableName: weather
+        - addUniqueConstraint:
+            tableName: weather
+            columnNames: open_weather_id
+            constraintName: unique_open_weather_id

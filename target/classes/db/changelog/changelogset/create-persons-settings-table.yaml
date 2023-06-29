@@ -1,0 +1,62 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_person_settings_table
+      author: Michael
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: person_settings_key
+                  name: id
+                  type: BIGSERIAL
+              - column:
+                  constraints:
+                    nullable: false
+                  defaultValue: true
+                  name: comment_comment
+                  type: BOOLEAN
+              - column:
+                  constraints:
+                    nullable: false
+                  defaultValue: true
+                  name: friend_birthday
+                  type: BOOLEAN
+              - column:
+                  constraints:
+                    nullable: false
+                  defaultValue: true
+                  name: friend_request
+                  type: BOOLEAN
+              - column:
+                  constraints:
+                    nullable: false
+                  defaultValue: true
+                  name: post_like
+                  type: BOOLEAN
+              - column:
+                  constraints:
+                    nullable: false
+                  defaultValue: true
+                  name: message
+                  type: BOOLEAN
+              - column:
+                  constraints:
+                    nullable: false
+                  defaultValue: true
+                  name: post_comment
+                  type: BOOLEAN
+              - column:
+                  constraints:
+                    nullable: false
+                  defaultValue: true
+                  name: post
+                  type: BOOLEAN
+            tableName: person_settings
+        - addForeignKeyConstraint:
+            baseColumnNames: id
+            baseTableName: person_settings
+            constraintName: fk_persons
+            referencedColumnNames: id
+            referencedTableName: persons

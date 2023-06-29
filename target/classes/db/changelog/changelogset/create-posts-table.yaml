@@ -1,0 +1,36 @@
+databaseChangeLog:
+  - changeSet:
+      id: 8(1)
+      author: Michael
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: posts_key
+                  name: id
+                  type: BIGSERIAL
+              - column:
+                  name: is_blocked
+                  type: BOOLEAN
+              - column:
+                  name: is_deleted
+                  type: BOOLEAN
+              - column:
+                  name: post_text
+                  type: TEXT
+              - column:
+                  name: time
+                  type: TIMESTAMP WITHOUT TIME ZONE
+              - column:
+                  name: time_delete
+                  type: TIMESTAMP WITHOUT TIME ZONE
+              - column:
+                  name: title
+                  type: VARCHAR(255)
+              - column:
+                  name: author_id
+                  type: BIGINT
+            tableName: posts

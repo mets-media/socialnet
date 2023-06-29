@@ -1,0 +1,7 @@
+app.services.greeting.message: Social NET
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/socialnet
+    username: postgres
+    password: admin

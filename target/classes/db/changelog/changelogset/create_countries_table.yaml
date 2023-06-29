@@ -1,0 +1,26 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_countries_table
+      author: Michael
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: countries_key
+                  name: id
+                  type: BIGSERIAL
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+              - column:
+                  name: full_name
+                  type: VARCHAR(255)
+              - column:
+                  name: code2
+                  type: VARCHAR(2)
+              - column:
+                  name: international_name
+                  type: VARCHAR(255)
+            tableName: countries

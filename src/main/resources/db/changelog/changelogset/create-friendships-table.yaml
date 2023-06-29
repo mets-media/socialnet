@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-Friends
+      author: isakov
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: friendships_key
+                  name: id
+                  type: BIGSERIAL
+              - column:
+                  name: sent_time
+                  type: TIMESTAMP WITHOUT TIME ZONE
+              - column:
+                  name: dst_person_id
+                  type: BIGINT
+              - column:
+                  name: src_person_id
+                  type: BIGINT
+              - column:
+                  name: status_name
+                  type: VARCHAR(255)
+            tableName: friendships

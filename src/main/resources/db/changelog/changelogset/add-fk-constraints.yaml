@@ -1,0 +1,232 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2_1(2)
+      author: Michael
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: comment_id
+            baseTableName: block_history
+            constraintName: fk_block-hisory_comment
+            referencedColumnNames: id
+            referencedTableName: post_comments
+  - changeSet:
+      id: 2_2
+      author: Michael
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: person_id
+            baseTableName: block_history
+            constraintName: fk_block-hisory-person
+            referencedColumnNames: id
+            referencedTableName: persons
+  - changeSet:
+      id: 2_3
+      author: Michael
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: post_id
+            baseTableName: block_history
+            constraintName: fk_block-hisory-posts
+            referencedColumnNames: id
+            referencedTableName: posts
+  - changeSet:
+      id: 13_1
+      author: Michael
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: first_person_id
+            baseTableName: dialogs
+            constraintName: fk_dialogs-person1
+            referencedColumnNames: id
+            referencedTableName: persons
+  - changeSet:
+      id: 13_2
+      author: Michael
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: second_person_id
+            baseTableName: dialogs
+            constraintName: fk_dialogs-person2
+            referencedColumnNames: id
+            referencedTableName: persons
+  - changeSet:
+      id: 9_1
+      author: Michael
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: person_id
+            baseTableName: likes
+            constraintName: fk_likes-person
+            referencedColumnNames: id
+            referencedTableName: persons
+  - changeSet:
+      id: 12_1
+      author: Michael
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: author_id
+            baseTableName: messages
+            constraintName: fk_messages-person
+            referencedColumnNames: id
+            referencedTableName: persons
+  - changeSet:
+      id: 12_2
+      author: Michael
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: dialog_id
+            baseTableName: messages
+            constraintName: fk_messages-dialogs
+            referencedColumnNames: id
+            referencedTableName: dialogs
+  - changeSet:
+      id: 12_3
+      author: Michael
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: recipient_id
+            baseTableName: messages
+            constraintName: fk_messages-recipient
+            referencedColumnNames: id
+            referencedTableName: persons
+  - changeSet:
+      id: 15_1
+      author: Michael
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: person_id
+            baseTableName: notifications
+            constraintName: fk_notifications-person
+            referencedColumnNames: id
+            referencedTableName: persons
+  - changeSet:
+      id: 10_1
+      author: Michael
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: post_id
+            baseTableName: post2tag
+            constraintName: fk_post2tag-post
+            referencedColumnNames: id
+            referencedTableName: posts
+  - changeSet:
+      id: 10_2
+      author: Michael
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: post_id
+            baseTableName: post2tag
+            constraintName: fk_post2tag-tags
+            referencedColumnNames: id
+            referencedTableName: tags
+  - changeSet:
+      id: 6_1(1)
+      author: Michael
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: parent_id
+            baseTableName: post_comments
+            constraintName: fk_pctopc
+            referencedColumnNames: id
+            referencedTableName: post_comments
+  - changeSet:
+      id: 6_2
+      author: Michael
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: author_id
+            baseTableName: post_comments
+            constraintName: fk_post_comments-person
+            referencedColumnNames: id
+            referencedTableName: persons
+  - changeSet:
+      id: 6_3
+      author: Michael
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: post_id
+            baseTableName: post_comments
+            constraintName: fk_post_comments-posts
+            referencedColumnNames: id
+            referencedTableName: posts
+  - changeSet:
+      id: 7_1
+      author: Michael
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: post_id
+            baseTableName: post_files
+            constraintName: fk_post_files-post
+            referencedColumnNames: id
+            referencedTableName: posts
+  - changeSet:
+      id: 8_1
+      author: Michael
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: author_id
+            baseTableName: posts
+            constraintName: fk_posts-person
+            referencedColumnNames: id
+            referencedTableName: persons
+  - changeSet:
+      id: 10_2(2)
+      author: Michael
+      changes:
+        - dropForeignKeyConstraint:
+            baseTableName: post2tag
+            constraintName: fk_post2tag-tags
+
+  - changeSet:
+      id: 10_2(1)
+      author: Michael
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: tag_id
+            baseTableName: post2tag
+            constraintName: fk_post2tag-tags
+            referencedColumnNames: id
+            referencedTableName: tags
+
+  - changeSet:
+      id: addUniqueConstraint-person_email
+      author: Michael
+      changes:
+       - addUniqueConstraint:
+           columnNames: email
+           constraintName: person_email
+           tableName: persons
+  - changeSet:
+     id: addNotNullConstraint-person-isBlocked
+     author: Michael
+     changes:
+       - addNotNullConstraint:
+           columnDataType: boolean
+           columnName: is_blocked
+           constraintName: is_blocked_constraint
+           defaultNullValue: false
+           tableName: persons
+  - changeSet:
+     id: addNotNullConstraint-person-isApproved
+     author: Michael
+     changes:
+       - addNotNullConstraint:
+           columnDataType: boolean
+           columnName: is_approved
+           constraintName: is_approved_constraint
+           defaultNullValue: false
+           tableName: persons
+       - addNotNullConstraint:
+           columnDataType: boolean
+           columnName: is_deleted
+           constraintName: is_deleted_constraint
+           defaultNullValue: false
+           tableName: persons
+  - changeSet:
+      id: addUniqueConstraint-person_email
+      author: Michael
+      changes:
+        - addUniqueConstraint:
+            columnNames: email
+            constraintName: person_email
+            tableName: persons

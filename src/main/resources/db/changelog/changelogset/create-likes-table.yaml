@@ -1,0 +1,28 @@
+databaseChangeLog:
+  - changeSet:
+      id: 9(1)
+      author: Michael
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: likes_key
+                  name: id
+                  type: BIGSERIAL
+              - column:
+                  name: type
+                  type: VARCHAR(255)
+              - column:
+                  name: entity_id
+                  type: BIGINT
+              - column:
+                  name: time
+                  type: TIMESTAMP WITHOUT TIME ZONE
+              - column:
+                  name: person_id
+                  type: BIGINT
+            tableName: likes
+

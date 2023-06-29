@@ -1,0 +1,36 @@
+databaseChangeLog:
+  - changeSet:
+      id: 12(1)
+      author: Michael
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: messages_key
+                  name: id
+                  type: BIGSERIAL
+              - column:
+                  name: is_deleted
+                  type: BOOLEAN
+              - column:
+                  name: message_text
+                  type: TEXT
+              - column:
+                  name: read_status
+                  type: VARCHAR(255)
+              - column:
+                  name: time
+                  type: TIMESTAMP WITHOUT TIME ZONE
+              - column:
+                  name: dialog_id
+                  type: BIGINT
+              - column:
+                  name: author_id
+                  type: BIGINT
+              - column:
+                  name: recipient_id
+                  type: BIGINT
+            tableName: messages

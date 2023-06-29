@@ -1,0 +1,44 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-FriendsCountryCity
+      author: isakov
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: cities_key
+                  name: id
+                  type: BIGSERIAL
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+              - column:
+                  name: country_id
+                  type: BIGINT
+              - column:
+                  name: state
+                  type: varchar(2)
+              - column:
+                  name: lon
+                  type: decimal
+              - column:
+                  name: lat
+                  type: decimal
+              - column:
+                  name: open_weather_id
+                  type: bigint
+              - column:
+                  name: code2
+                  type: varchar(2)
+              - column:
+                  name: international_name
+                  type: varchar(255)
+            tableName: cities
+        - addUniqueConstraint:
+            columnNames: open_weather_id
+            constraintName: unique_weather_id
+            tableName: cities
+

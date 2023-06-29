@@ -1,0 +1,33 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2(1)
+      author: Michael
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: block_history_key
+                  name: id
+                  type: BIGSERIAL
+              - column:
+                  name: action
+                  type: VARCHAR(255)
+              - column:
+                  name: time
+                  type: TIMESTAMP WITHOUT TIME ZONE
+              - column:
+                  name: comment_id
+                  type: BIGINT
+              - column:
+                  name: person_id
+                  type: BIGINT
+              - column:
+                  name: post_id
+                  type: BIGINT
+            tableName: block_history
+
+
+

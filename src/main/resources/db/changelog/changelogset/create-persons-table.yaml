@@ -1,0 +1,84 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3(1)
+      author: Michael
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: person_key
+                  name: id
+                  type: BIGSERIAL
+              - column:
+                  name: about
+                  type: VARCHAR(255)
+              - column:
+                  name: birth_date
+                  type: TIMESTAMP WITHOUT TIME ZONE
+              - column:
+                  name: change_password_token
+                  type: VARCHAR(255)
+              - column:
+                  name: configuration_code
+                  type: INTEGER
+              - column:
+                  name: deleted_time
+                  type: TIMESTAMP WITHOUT TIME ZONE
+              - column:
+                  name: email
+                  type: VARCHAR(255)
+              - column:
+                  name: first_name
+                  type: VARCHAR(255)
+              - column:
+                  name: is_approved
+                  type: BOOLEAN
+              - column:
+                  name: is_blocked
+                  type: BOOLEAN
+              - column:
+                  name: is_deleted
+                  type: BOOLEAN
+              - column:
+                  name: last_name
+                  type: VARCHAR(255)
+              - column:
+                  name: last_online_time
+                  type: TIMESTAMP WITHOUT TIME ZONE
+              - column:
+                  name: message_permissions
+                  type: VARCHAR(255)
+              - column:
+                  name: notifications_session_id
+                  type: VARCHAR(255)
+              - column:
+                  name: online_status
+                  type: VARCHAR(255)
+              - column:
+                  name: password
+                  type: VARCHAR(255)
+              - column:
+                  name: phone
+                  type: VARCHAR(255)
+              - column:
+                  name: photo
+                  type: VARCHAR(255)
+              - column:
+                  name: reg_date
+                  type: TIMESTAMP WITHOUT TIME ZONE
+              - column:
+                  name: city
+                  type: VARCHAR(255)
+              - column:
+                  name: country
+                  type: VARCHAR(255)
+              - column:
+                  name: telegram_id
+                  type: BIGINT
+              - column:
+                  name: person_settings_id
+                  type: BIGINT
+            tableName: persons

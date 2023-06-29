@@ -1,0 +1,34 @@
+databaseChangeLog:
+  - changeSet:
+      id: 15(1)
+      author: Michael
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: notifications_key
+                  name: id
+                  type: BIGSERIAL
+              - column:
+                  name: contact
+                  type: VARCHAR(255)
+              - column:
+                  name: notification_type
+                  type: VARCHAR(255)
+              - column:
+                  name: entity_id
+                  type: BIGINT
+              - column:
+                  name: is_read
+                  type: BOOLEAN
+              - column:
+                  name: sent_time
+                  type: TIMESTAMP WITHOUT TIME ZONE
+              - column:
+                  name: person_id
+                  type: BIGINT
+            tableName: notifications
+

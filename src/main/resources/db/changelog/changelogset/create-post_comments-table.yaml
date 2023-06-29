@@ -1,0 +1,37 @@
+databaseChangeLog:
+  - changeSet:
+      id: 6(1)
+      author: Michael
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: post_comments_key
+                  name: id
+                  type: BIGSERIAL
+              - column:
+                  name: comment_text
+                  type: TEXT
+              - column:
+                  name: is_blocked
+                  type: BOOLEAN
+              - column:
+                  name: is_deleted
+                  type: BOOLEAN
+              - column:
+                  name: time
+                  type: TIMESTAMP WITHOUT TIME ZONE
+              - column:
+                  name: parent_id
+                  type: BIGINT
+              - column:
+                  name: author_id
+                  type: BIGINT
+              - column:
+                  name: post_id
+                  type: BIGINT
+            tableName: post_comments
+

@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - changeSet:
+      id: 10(1)
+      author: Michael
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: post2tag_key
+                  name: id
+                  type: BIGSERIAL
+              - column:
+                  name: post_id
+                  type: BIGINT
+              - column:
+                  name: tag_id
+                  type: BIGINT
+            tableName: post2tag
+

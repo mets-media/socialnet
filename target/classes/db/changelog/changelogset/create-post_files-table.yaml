@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - changeSet:
+      id: 7(1)
+      author: Michael
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: post_files_key
+                  name: id
+                  type: BIGSERIAL
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+              - column:
+                  name: path
+                  type: VARCHAR(255)
+              - column:
+                  name: post_id
+                  type: BIGINT
+            tableName: post_files
+

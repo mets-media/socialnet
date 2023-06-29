@@ -1,0 +1,174 @@
+29.06.2023 07:50:23.462 [main] INFO   s.SocialNetApp - Starting SocialNetApp on air-alexandr with PID 1402 (/Users/alexandr/IdeaProjects/socialnet/target/classes started by alexandr in /Users/alexandr/IdeaProjects/socialnet)
+29.06.2023 07:50:23.470 [main] INFO   s.SocialNetApp - The following profiles are active: mets
+29.06.2023 07:50:27.212 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8086 (http)
+29.06.2023 07:50:27.222 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8086"]
+29.06.2023 07:50:27.223 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
+29.06.2023 07:50:27.223 [main] INFO   o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+29.06.2023 07:50:27.505 [main] INFO   o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+29.06.2023 07:50:27.506 [main] INFO   o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3929 ms
+29.06.2023 07:50:29.327 [main] INFO   o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientInboundChannelExecutor'
+29.06.2023 07:50:29.349 [main] INFO   o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientOutboundChannelExecutor'
+29.06.2023 07:50:29.570 [main] WARN   c.a.a.p.i.BasicProfileConfigLoader - Your profile name includes a 'profile ' prefix. This is considered part of the profile name in the Java SDK, so you will need to include this prefix in your profile name when you reference this profile from your Java code.
+29.06.2023 07:50:29.718 [main] WARN   c.a.a.p.i.BasicProfileConfigLoader - Your profile name includes a 'profile ' prefix. This is considered part of the profile name in the Java SDK, so you will need to include this prefix in your profile name when you reference this profile from your Java code.
+29.06.2023 07:50:30.030 [main] WARN   c.a.a.p.i.BasicProfileConfigLoader - Your profile name includes a 'profile ' prefix. This is considered part of the profile name in the Java SDK, so you will need to include this prefix in your profile name when you reference this profile from your Java code.
+29.06.2023 07:50:30.800 [main] INFO   o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'messageBrokerTaskScheduler'
+29.06.2023 07:50:30.838 [main] INFO   o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'brokerChannelExecutor'
+29.06.2023 07:50:31.132 [main] INFO   o.s.s.w.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6b170692, org.springframework.security.web.context.SecurityContextPersistenceFilter@5f14590c, org.springframework.security.web.header.HeaderWriterFilter@270be080, org.springframework.web.filter.CorsFilter@4d4bac56, org.springframework.security.web.authentication.logout.LogoutFilter@75507e68, socialnet.security.jwt.AuthTokenFilter@194037f9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@67baa05, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3f78a5ed, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@76980c75, org.springframework.security.web.session.SessionManagementFilter@384f0e32, org.springframework.security.web.access.ExceptionTranslationFilter@623ded82, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@29b0c169]
+29.06.2023 07:50:31.142 [main] INFO   o.s.s.a.AnnotationAsyncExecutionInterceptor - More than one TaskExecutor bean found within the context, and none is named 'taskExecutor'. Mark one of them as primary or name it 'taskExecutor' (possibly as an alias) in order to use it for async processing: [clientInboundChannelExecutor, clientOutboundChannelExecutor, brokerChannelExecutor, messageBrokerTaskScheduler]
+29.06.2023 07:50:32.123 [main] INFO   c.z.h.HikariDataSource - HikariPool-1 - Starting...
+29.06.2023 07:50:32.332 [main] INFO   c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+29.06.2023 07:50:32.482 [main] INFO   liquibase.database - Set default schema name to public
+29.06.2023 07:50:32.589 [main] INFO   l.lockservice - Successfully acquired change log lock
+29.06.2023 07:50:32.986 [main] INFO   liquibase.changelog - Reading from public.databasechangelog
+29.06.2023 07:50:33.155 [main] INFO   l.lockservice - Successfully released change log lock
+29.06.2023 07:50:33.472 [main] INFO   o.s.b.a.e.w.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+29.06.2023 07:50:33.547 [main] INFO   o.a.k.c.a.AdminClientConfig - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [81.177.6.228:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+29.06.2023 07:50:33.621 [main] INFO   o.a.k.c.u.AppInfoParser - Kafka version: 3.4.0
+29.06.2023 07:50:33.621 [main] INFO   o.a.k.c.u.AppInfoParser - Kafka commitId: 2e1947d240607d53
+29.06.2023 07:50:33.621 [main] INFO   o.a.k.c.u.AppInfoParser - Kafka startTimeMs: 1687985433618
+29.06.2023 07:50:37.907 [SimpleAsyncTaskExecutor-1] ERROR  s.s.l.LogWriter - Created
+29.06.2023 07:50:42.586 [kafka-admin-client-thread | adminclient-1] INFO   o.a.k.c.NetworkClient - [AdminClient clientId=adminclient-1] Disconnecting from node -1 due to socket connection setup timeout. The timeout value is 8861 ms.
+29.06.2023 07:50:59.711 [kafka-admin-client-thread | adminclient-1] INFO   o.a.k.c.NetworkClient - [AdminClient clientId=adminclient-1] Disconnecting from node -1 due to socket connection setup timeout. The timeout value is 16955 ms.
+29.06.2023 07:51:03.640 [kafka-admin-client-thread | adminclient-1] INFO   o.a.k.c.a.i.AdminMetadataManager - [AdminClient clientId=adminclient-1] Metadata update failed
+org.apache.kafka.common.errors.TimeoutException: Timed out waiting to send the call. Call: fetchMetadata
+29.06.2023 07:51:03.641 [main] ERROR  o.s.k.c.KafkaAdmin - Could not configure topics
+org.springframework.kafka.KafkaException: Timed out waiting to get existing topics; nested exception is java.util.concurrent.TimeoutException
+	at org.springframework.kafka.core.KafkaAdmin.lambda$checkPartitions$4(KafkaAdmin.java:254)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1337)
+	at org.springframework.kafka.core.KafkaAdmin.checkPartitions(KafkaAdmin.java:233)
+	at org.springframework.kafka.core.KafkaAdmin.addTopicsIfNeeded(KafkaAdmin.java:219)
+	at org.springframework.kafka.core.KafkaAdmin.initialize(KafkaAdmin.java:189)
+	at org.springframework.kafka.core.KafkaAdmin.afterSingletonsInstantiated(KafkaAdmin.java:157)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:914)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:402)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1247)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1236)
+	at socialnet.SocialNetApp.main(SocialNetApp.java:11)
+Caused by: java.util.concurrent.TimeoutException: null
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1886)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2021)
+	at org.apache.kafka.common.internals.KafkaFutureImpl.get(KafkaFutureImpl.java:180)
+	at org.springframework.kafka.core.KafkaAdmin.lambda$checkPartitions$4(KafkaAdmin.java:236)
+	... 16 common frames omitted
+29.06.2023 07:51:13.648 [kafka-admin-client-thread | adminclient-1] INFO   o.a.k.c.a.KafkaAdminClient - [AdminClient clientId=adminclient-1] Forcing a hard I/O thread shutdown. Requests in progress will be aborted.
+29.06.2023 07:51:13.667 [kafka-admin-client-thread | adminclient-1] INFO   o.a.k.c.u.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+29.06.2023 07:51:13.680 [kafka-admin-client-thread | adminclient-1] INFO   o.a.k.c.a.i.AdminMetadataManager - [AdminClient clientId=adminclient-1] Metadata update failed
+org.apache.kafka.common.errors.TimeoutException: Timed out waiting to send the call. Call: fetchMetadata
+29.06.2023 07:51:13.683 [kafka-admin-client-thread | adminclient-1] INFO   o.a.k.c.a.KafkaAdminClient - [AdminClient clientId=adminclient-1] Timed out 2 remaining operation(s) during close.
+29.06.2023 07:51:13.704 [kafka-admin-client-thread | adminclient-1] INFO   o.a.k.c.m.Metrics - Metrics scheduler closed
+29.06.2023 07:51:13.706 [kafka-admin-client-thread | adminclient-1] INFO   o.a.k.c.m.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+29.06.2023 07:51:13.708 [kafka-admin-client-thread | adminclient-1] INFO   o.a.k.c.m.Metrics - Metrics reporters closed
+29.06.2023 07:51:13.712 [main] INFO   o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8086"]
+29.06.2023 07:51:13.747 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 8086 (http) with context path ''
+29.06.2023 07:51:13.756 [main] INFO   o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+29.06.2023 07:51:13.756 [main] INFO   o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+29.06.2023 07:51:13.757 [main] INFO   o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+29.06.2023 07:51:13.788 [main] INFO   o.s.s.a.ScheduledAnnotationBeanPostProcessor - More than one TaskScheduler bean exists within the context, and none is named 'taskScheduler'. Mark one of them as primary or name it 'taskScheduler' (possibly as an alias); or implement the SchedulingConfigurer interface and call ScheduledTaskRegistrar#setScheduler explicitly within the configureTasks() callback: [defaultSockJsTaskScheduler, messageBrokerTaskScheduler]
+29.06.2023 07:51:13.818 [main] INFO   s.SocialNetApp - Started SocialNetApp in 52.216 seconds (JVM running for 53.586)
+29.06.2023 07:51:16.542 [SimpleAsyncTaskExecutor-3] ERROR  s.s.l.LogWriter - Created
+29.06.2023 07:51:30.740 [MessageBroker-1] INFO   o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+29.06.2023 07:51:45.689 [http-nio-8086-exec-1] INFO   o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+29.06.2023 07:51:45.691 [http-nio-8086-exec-1] INFO   o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+29.06.2023 07:51:45.822 [http-nio-8086-exec-1] INFO   o.s.w.s.DispatcherServlet - Completed initialization in 131 ms
+29.06.2023 07:51:46.489 [http-nio-8086-exec-2] INFO   s.s.l.LogConfig - Старт метода: getWeatherByCity в классе: socialnet.service.WeatherService результат: WeatherRs(city=null, clouds=null, date=null, temp=null)
+29.06.2023 07:51:47.842 [http-nio-8086-exec-2] INFO   s.s.l.LogConfig - Старт метода: getCurrency в классе: socialnet.service.CurrencyService результат: CurrencyRs(euro=93,8644, usd=85,6192)
+29.06.2023 07:51:47.848 [http-nio-8086-exec-2] INFO   s.s.l.LogConfig - Старт метода: getLogin в классе: socialnet.service.PersonService результат: CommonRs(data=PersonRs(about=null, birthDate=null, city=null, country=null, currency=CurrencyRs(euro=93,8644, usd=85,6192), email=mets@inbox.ru, firstName=dfg, friendStatus=null, id=1, isBlocked=false, isBlockedByCurrentUser=false, lastName=fgdfg, lastOnlineTime=2023-05-31 15:25:51.695823, messagesPermission=null, online=true, phone=null, photo=https://storage.yandexcloud.net/socnet37/users_photo/man.png, regDate=2023-05-31 15:24:57.738, token=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtZXRzQGluYm94LnJ1IiwiaWF0IjoxNjg3OTg1NTA2LCJleHAiOjE2ODkxOTUxMDZ9._QMKdD44XaXy-FE7_VB8GBXoa8TmBbcRP9HNkk0pr_UkXOo4x0R8j3ggV3t7D4oloKH7OEAnUsn_ekan4rMq9w, userDeleted=false, weather=WeatherRs(city=null, clouds=null, date=null, temp=null)), itemPerPage=0, offset=0, perPage=0, timestamp=1687985507847, total=0)
+29.06.2023 07:51:48.092 [http-nio-8086-exec-6] INFO   s.s.l.LogConfig - Старт метода: getWeatherByCity в классе: socialnet.service.WeatherService результат: WeatherRs(city=null, clouds=null, date=null, temp=null)
+29.06.2023 07:51:48.104 [http-nio-8086-exec-5] INFO   s.s.l.LogConfig - Старт метода: getAllNotifications в классе: socialnet.service.NotificationsService результат: CommonRs(data=[], itemPerPage=0, offset=0, perPage=0, timestamp=1687985508103, total=0)
+29.06.2023 07:51:48.397 [http-nio-8086-exec-6] INFO   s.s.l.LogConfig - Старт метода: getCurrency в классе: socialnet.service.CurrencyService результат: CurrencyRs(euro=93,8644, usd=85,6192)
+29.06.2023 07:51:48.397 [http-nio-8086-exec-6] INFO   s.s.l.LogConfig - Старт метода: getMyProfile в классе: socialnet.service.PersonService результат: CommonRs(data=PersonRs(about=null, birthDate=null, city=null, country=null, currency=CurrencyRs(euro=93,8644, usd=85,6192), email=mets@inbox.ru, firstName=dfg, friendStatus=null, id=1, isBlocked=false, isBlockedByCurrentUser=false, lastName=fgdfg, lastOnlineTime=2023-06-29 07:51:48.063919, messagesPermission=null, online=true, phone=null, photo=https://storage.yandexcloud.net/socnet37/users_photo/man.png, regDate=2023-05-31 15:24:57.738, token=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtZXRzQGluYm94LnJ1IiwiaWF0IjoxNjg3OTg1NTA2LCJleHAiOjE2ODkxOTUxMDZ9._QMKdD44XaXy-FE7_VB8GBXoa8TmBbcRP9HNkk0pr_UkXOo4x0R8j3ggV3t7D4oloKH7OEAnUsn_ekan4rMq9w, userDeleted=false, weather=WeatherRs(city=null, clouds=null, date=null, temp=null)), itemPerPage=0, offset=0, perPage=0, timestamp=1687985508397, total=0)
+29.06.2023 07:51:48.535 [http-nio-8086-exec-8] INFO   s.s.l.LogConfig - Старт метода: getAllNotifications в классе: socialnet.service.NotificationsService результат: CommonRs(data=[], itemPerPage=0, offset=0, perPage=0, timestamp=1687985508534, total=0)
+29.06.2023 07:51:48.611 [http-nio-8086-exec-2] INFO   s.s.l.LogConfig - Старт метода: getFeeds в классе: socialnet.service.PostService результат: CommonRs(data=[], itemPerPage=20, offset=0, perPage=20, timestamp=1687985508611, total=0)
+29.06.2023 07:51:48.647 [http-nio-8086-exec-3] INFO   s.s.l.LogConfig - Старт метода: getRecommendedFriends в классе: socialnet.service.FriendsService результат: CommonRs(data=[], itemPerPage=0, offset=0, perPage=10, timestamp=1687985508646, total=0)
+29.06.2023 07:51:50.437 [http-nio-8086-exec-9] INFO   s.s.l.LogConfig - Старт метода: getRecommendedFriends в классе: socialnet.service.FriendsService результат: CommonRs(data=[], itemPerPage=0, offset=0, perPage=10, timestamp=1687985510437, total=0)
+29.06.2023 07:51:50.460 [http-nio-8086-exec-1] INFO   s.s.l.LogConfig - Старт метода: getFeedsByAuthorId в классе: socialnet.service.PostService результат: CommonRs(data=[], itemPerPage=20, offset=0, perPage=20, timestamp=1687985510460, total=0)
+29.06.2023 07:51:52.547 [http-nio-8086-exec-2] INFO   s.s.l.LogConfig - Старт метода: findAllCountry в классе: socialnet.service.GeolocationsService результат: [socialnet.api.response.GeolocationRs@27327a2d, socialnet.api.response.GeolocationRs@56fda0f4, socialnet.api.response.GeolocationRs@313754c, socialnet.api.response.GeolocationRs@19eb6a23, socialnet.api.response.GeolocationRs@2d3c9821, socialnet.api.response.GeolocationRs@16fd6772, socialnet.api.response.GeolocationRs@edcc9f4, socialnet.api.response.GeolocationRs@4c24107e, socialnet.api.response.GeolocationRs@510644b, socialnet.api.response.GeolocationRs@782b556c, socialnet.api.response.GeolocationRs@10d0b0f4, socialnet.api.response.GeolocationRs@7c9be570, socialnet.api.response.GeolocationRs@7a2fe494, socialnet.api.response.GeolocationRs@580d4e88, socialnet.api.response.GeolocationRs@4d4f026d, socialnet.api.response.GeolocationRs@6e5cded1, socialnet.api.response.GeolocationRs@6bd28cca, socialnet.api.response.GeolocationRs@5999f636, socialnet.api.response.GeolocationRs@6cf0cb02, socialnet.api.response.GeolocationRs@64523a1b, socialnet.api.response.GeolocationRs@1b195e87, socialnet.api.response.GeolocationRs@da72394, socialnet.api.response.GeolocationRs@67e551f9, socialnet.api.response.GeolocationRs@12922dfc, socialnet.api.response.GeolocationRs@432ea44f, socialnet.api.response.GeolocationRs@77a1943d, socialnet.api.response.GeolocationRs@3a0669a9, socialnet.api.response.GeolocationRs@39784ed8, socialnet.api.response.GeolocationRs@f429964, socialnet.api.response.GeolocationRs@7439e4cd, socialnet.api.response.GeolocationRs@7dfb80c2, socialnet.api.response.GeolocationRs@60e1f2b, socialnet.api.response.GeolocationRs@1d9c2f37, socialnet.api.response.GeolocationRs@2638bfc5, socialnet.api.response.GeolocationRs@7e4c650, socialnet.api.response.GeolocationRs@716566c0, socialnet.api.response.GeolocationRs@d7c0a4c, socialnet.api.response.GeolocationRs@6ed95ab1, socialnet.api.response.GeolocationRs@4faec77c, socialnet.api.response.GeolocationRs@1527eb2f, socialnet.api.response.GeolocationRs@78e4adad, socialnet.api.response.GeolocationRs@5c4c6cd2, socialnet.api.response.GeolocationRs@6560d500, socialnet.api.response.GeolocationRs@4f342410, socialnet.api.response.GeolocationRs@1260719e, socialnet.api.response.GeolocationRs@2d75a5fc, socialnet.api.response.GeolocationRs@4e5ebd87, socialnet.api.response.GeolocationRs@202414f8, socialnet.api.response.GeolocationRs@31d96de3, socialnet.api.response.GeolocationRs@31036461, socialnet.api.response.GeolocationRs@a8a5543, socialnet.api.response.GeolocationRs@a89033e, socialnet.api.response.GeolocationRs@7045d1f9, socialnet.api.response.GeolocationRs@5a4f83fc, socialnet.api.response.GeolocationRs@237f5bb, socialnet.api.response.GeolocationRs@40658630, socialnet.api.response.GeolocationRs@1e715ddc, socialnet.api.response.GeolocationRs@38877d8d, socialnet.api.response.GeolocationRs@520cd0b, socialnet.api.response.GeolocationRs@69189f99, socialnet.api.response.GeolocationRs@7d93b0db, socialnet.api.response.GeolocationRs@7efbc1f1, socialnet.api.response.GeolocationRs@7db013b0, socialnet.api.response.GeolocationRs@50f9afc8, socialnet.api.response.GeolocationRs@300cc864, socialnet.api.response.GeolocationRs@105873dd, socialnet.api.response.GeolocationRs@6d88dff5, socialnet.api.response.GeolocationRs@7012ba63, socialnet.api.response.GeolocationRs@260b13ed, socialnet.api.response.GeolocationRs@759e4a6a, socialnet.api.response.GeolocationRs@5ec2445b, socialnet.api.response.GeolocationRs@3be62c42, socialnet.api.response.GeolocationRs@450cd4a8, socialnet.api.response.GeolocationRs@42461b79, socialnet.api.response.GeolocationRs@eea6ff6, socialnet.api.response.GeolocationRs@4e4d655, socialnet.api.response.GeolocationRs@27eefbf5, socialnet.api.response.GeolocationRs@5501b1a2, socialnet.api.response.GeolocationRs@8c9f12b, socialnet.api.response.GeolocationRs@2a3dd819, socialnet.api.response.GeolocationRs@7a5caff8, socialnet.api.response.GeolocationRs@22889db0, socialnet.api.response.GeolocationRs@658f6063, socialnet.api.response.GeolocationRs@213691db, socialnet.api.response.GeolocationRs@3e0ac96a, socialnet.api.response.GeolocationRs@5889a606, socialnet.api.response.GeolocationRs@469b590c, socialnet.api.response.GeolocationRs@5336b04d, socialnet.api.response.GeolocationRs@3b9f72d8, socialnet.api.response.GeolocationRs@2e335a3b, socialnet.api.response.GeolocationRs@327c35c8, socialnet.api.response.GeolocationRs@54ae5f12, socialnet.api.response.GeolocationRs@1467eeed, socialnet.api.response.GeolocationRs@20319cd8, socialnet.api.response.GeolocationRs@73303f63, socialnet.api.response.GeolocationRs@5540b8d8, socialnet.api.response.GeolocationRs@7efb341b, socialnet.api.response.GeolocationRs@5280b040, socialnet.api.response.GeolocationRs@20394654, socialnet.api.response.GeolocationRs@706facf3, socialnet.api.response.GeolocationRs@57931509, socialnet.api.response.GeolocationRs@46bd0b, socialnet.api.response.GeolocationRs@6a2750b1, socialnet.api.response.GeolocationRs@67226132, socialnet.api.response.GeolocationRs@28560b82, socialnet.api.response.GeolocationRs@1dcd4566, socialnet.api.response.GeolocationRs@4d3f3cb6, socialnet.api.response.GeolocationRs@3960efd2, socialnet.api.response.GeolocationRs@21f2f967, socialnet.api.response.GeolocationRs@56637e4a, socialnet.api.response.GeolocationRs@620d32bc, socialnet.api.response.GeolocationRs@5c2d5f50, socialnet.api.response.GeolocationRs@6a22ac73, socialnet.api.response.GeolocationRs@277e1e53, socialnet.api.response.GeolocationRs@2ced40d2, socialnet.api.response.GeolocationRs@1a0c5dc0, socialnet.api.response.GeolocationRs@65323bc6, socialnet.api.response.GeolocationRs@32e92db5, socialnet.api.response.GeolocationRs@74c400ea, socialnet.api.response.GeolocationRs@cdeb1ef, socialnet.api.response.GeolocationRs@784647b9, socialnet.api.response.GeolocationRs@3395981, socialnet.api.response.GeolocationRs@57aeca5c, socialnet.api.response.GeolocationRs@2e86588f, socialnet.api.response.GeolocationRs@6437a969, socialnet.api.response.GeolocationRs@2d0b113f, socialnet.api.response.GeolocationRs@cd6c2e8, socialnet.api.response.GeolocationRs@1088a1dd, socialnet.api.response.GeolocationRs@49ad3e44, socialnet.api.response.GeolocationRs@3c5a5ca7, socialnet.api.response.GeolocationRs@6211846, socialnet.api.response.GeolocationRs@53f2c716, socialnet.api.response.GeolocationRs@738d9c32, socialnet.api.response.GeolocationRs@1ddc5980, socialnet.api.response.GeolocationRs@13b19155, socialnet.api.response.GeolocationRs@563e3e42, socialnet.api.response.GeolocationRs@49cd44bb, socialnet.api.response.GeolocationRs@3622045b, socialnet.api.response.GeolocationRs@290610f3, socialnet.api.response.GeolocationRs@eede7bf, socialnet.api.response.GeolocationRs@2d268245, socialnet.api.response.GeolocationRs@b804b66, socialnet.api.response.GeolocationRs@1298436d, socialnet.api.response.GeolocationRs@73a99e9e, socialnet.api.response.GeolocationRs@6a040e04, socialnet.api.response.GeolocationRs@63d6b359, socialnet.api.response.GeolocationRs@33050765, socialnet.api.response.GeolocationRs@c6722f5, socialnet.api.response.GeolocationRs@46d96953, socialnet.api.response.GeolocationRs@10c356aa, socialnet.api.response.GeolocationRs@b6645f8, socialnet.api.response.GeolocationRs@3ea3aeeb, socialnet.api.response.GeolocationRs@33bdcb9d, socialnet.api.response.GeolocationRs@39c1ad46, socialnet.api.response.GeolocationRs@317603, socialnet.api.response.GeolocationRs@23c65418, socialnet.api.response.GeolocationRs@7e7a92de, socialnet.api.response.GeolocationRs@4a65abca, socialnet.api.response.GeolocationRs@416f5deb, socialnet.api.response.GeolocationRs@5018a74a, socialnet.api.response.GeolocationRs@7a5e23f5, socialnet.api.response.GeolocationRs@1d82fc8f, socialnet.api.response.GeolocationRs@26397ad1, socialnet.api.response.GeolocationRs@338eabab, socialnet.api.response.GeolocationRs@38c477a4, socialnet.api.response.GeolocationRs@32a882b7, socialnet.api.response.GeolocationRs@5faa89c1, socialnet.api.response.GeolocationRs@19bfa26c, socialnet.api.response.GeolocationRs@25d9fa8, socialnet.api.response.GeolocationRs@7416186e, socialnet.api.response.GeolocationRs@7ff963ac, socialnet.api.response.GeolocationRs@1b3112fd, socialnet.api.response.GeolocationRs@757f7eec, socialnet.api.response.GeolocationRs@31eecd45, socialnet.api.response.GeolocationRs@53e2cd7, socialnet.api.response.GeolocationRs@168b7077, socialnet.api.response.GeolocationRs@188de454, socialnet.api.response.GeolocationRs@5f4e96e5, socialnet.api.response.GeolocationRs@2be2414f, socialnet.api.response.GeolocationRs@66a7848c, socialnet.api.response.GeolocationRs@11ff6348, socialnet.api.response.GeolocationRs@3aad362c, socialnet.api.response.GeolocationRs@37ce00f, socialnet.api.response.GeolocationRs@59a58708, socialnet.api.response.GeolocationRs@332a4a57, socialnet.api.response.GeolocationRs@60650648, socialnet.api.response.GeolocationRs@4fdeed3, socialnet.api.response.GeolocationRs@7115a483, socialnet.api.response.GeolocationRs@100c3004, socialnet.api.response.GeolocationRs@5813330b, socialnet.api.response.GeolocationRs@33f3d5ac, socialnet.api.response.GeolocationRs@6f9e4eed, socialnet.api.response.GeolocationRs@1ee3cf0a, socialnet.api.response.GeolocationRs@5f292cb6, socialnet.api.response.GeolocationRs@725acc4a, socialnet.api.response.GeolocationRs@6fae0dca, socialnet.api.response.GeolocationRs@6f3504aa, socialnet.api.response.GeolocationRs@796fd966, socialnet.api.response.GeolocationRs@5df3729d, socialnet.api.response.GeolocationRs@422cf4b4, socialnet.api.response.GeolocationRs@5fba80f, socialnet.api.response.GeolocationRs@258e53f, socialnet.api.response.GeolocationRs@44791873, socialnet.api.response.GeolocationRs@6155cd1c, socialnet.api.response.GeolocationRs@3936bae9, socialnet.api.response.GeolocationRs@7c82d1ed, socialnet.api.response.GeolocationRs@70b4f48e, socialnet.api.response.GeolocationRs@3fc6eaa9, socialnet.api.response.GeolocationRs@33abfe4a, socialnet.api.response.GeolocationRs@594c5c6b, socialnet.api.response.GeolocationRs@e8bc348, socialnet.api.response.GeolocationRs@610e392, socialnet.api.response.GeolocationRs@6aa504b4, socialnet.api.response.GeolocationRs@5131a28f, socialnet.api.response.GeolocationRs@170ba62, socialnet.api.response.GeolocationRs@7dd5ad, socialnet.api.response.GeolocationRs@42bfe1b2, socialnet.api.response.GeolocationRs@1e4606b0, socialnet.api.response.GeolocationRs@1ae10cb0, socialnet.api.response.GeolocationRs@745f62fc, socialnet.api.response.GeolocationRs@49d0afb4, socialnet.api.response.GeolocationRs@678d53b8, socialnet.api.response.GeolocationRs@751b5775, socialnet.api.response.GeolocationRs@7adc93a8, socialnet.api.response.GeolocationRs@36bd2e48, socialnet.api.response.GeolocationRs@3ba0abb4, socialnet.api.response.GeolocationRs@14aff34a, socialnet.api.response.GeolocationRs@af073a4, socialnet.api.response.GeolocationRs@55e0c3dc, socialnet.api.response.GeolocationRs@6b233fdf, socialnet.api.response.GeolocationRs@fda452, socialnet.api.response.GeolocationRs@9998aba, socialnet.api.response.GeolocationRs@5a344676, socialnet.api.response.GeolocationRs@289b4728, socialnet.api.response.GeolocationRs@4529b95d, socialnet.api.response.GeolocationRs@a03718, socialnet.api.response.GeolocationRs@78dfd68c, socialnet.api.response.GeolocationRs@a0f6cb8, socialnet.api.response.GeolocationRs@264cff5, socialnet.api.response.GeolocationRs@3fd2056, socialnet.api.response.GeolocationRs@590ed13, socialnet.api.response.GeolocationRs@740b3bb5, socialnet.api.response.GeolocationRs@503449a6, socialnet.api.response.GeolocationRs@3aa12c66, socialnet.api.response.GeolocationRs@385ba654, socialnet.api.response.GeolocationRs@15a0e479, socialnet.api.response.GeolocationRs@672be612, socialnet.api.response.GeolocationRs@54da248d, socialnet.api.response.GeolocationRs@31565144]
+29.06.2023 07:51:56.585 [http-nio-8086-exec-6] INFO   s.s.l.LogConfig - Старт метода: getPersonSettings в классе: socialnet.service.PersonService результат: CommonRs(data=[PersonSettingsRs(enable=true, type=POST_COMMENT), PersonSettingsRs(enable=true, type=FRIEND_REQUEST), PersonSettingsRs(enable=true, type=COMMENT_COMMENT), PersonSettingsRs(enable=true, type=POST), PersonSettingsRs(enable=true, type=POST_LIKE), PersonSettingsRs(enable=true, type=FRIEND_BIRTHDAY), PersonSettingsRs(enable=true, type=MESSAGE)], itemPerPage=0, offset=0, perPage=0, timestamp=1687985516585, total=0)
+29.06.2023 07:53:58.824 [http-nio-8086-exec-1] INFO   s.s.l.LogConfig - Старт метода: getFeedsByAuthorId в классе: socialnet.service.PostService результат: CommonRs(data=[], itemPerPage=20, offset=0, perPage=20, timestamp=1687985638822, total=0)
+29.06.2023 07:53:58.834 [http-nio-8086-exec-4] INFO   s.s.l.LogConfig - Старт метода: getRecommendedFriends в классе: socialnet.service.FriendsService результат: CommonRs(data=[], itemPerPage=0, offset=0, perPage=10, timestamp=1687985638833, total=0)
+29.06.2023 08:21:30.651 [MessageBroker-4] INFO   o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(1)-CONNECTED(1)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 6], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 1], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 2, completed tasks = 429]
+29.06.2023 08:40:44.691 [SpringContextShutdownHook] INFO   o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+29.06.2023 08:40:44.693 [SpringContextShutdownHook] INFO   o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+29.06.2023 08:40:44.693 [SpringContextShutdownHook] INFO   o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+29.06.2023 08:40:44.812 [SpringContextShutdownHook] INFO   o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'brokerChannelExecutor'
+29.06.2023 08:40:44.813 [SpringContextShutdownHook] INFO   o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'messageBrokerTaskScheduler'
+29.06.2023 08:40:44.816 [SpringContextShutdownHook] INFO   o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientOutboundChannelExecutor'
+29.06.2023 08:40:44.816 [SpringContextShutdownHook] INFO   o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientInboundChannelExecutor'
+29.06.2023 08:40:44.820 [SpringContextShutdownHook] INFO   c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+29.06.2023 08:40:44.834 [SpringContextShutdownHook] INFO   c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
